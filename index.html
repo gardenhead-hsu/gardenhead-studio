@@ -1,179 +1,179 @@
-!DOCTYPE html
-html lang=zh-Hant
-head
-    meta charset=UTF-8
-    meta name=viewport content=width=device-width, initial-scale=1.0
-    title資訊研習工作室 - 現代作品集title
-    !-- 引入 Tailwind CSS CDN --
-    script src=httpscdn.tailwindcss.comscript
-    style
-         設定主要字體為 Inter，並確保中文顯示正常 
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>資訊研習工作室 - 現代作品集</title>
+    <!-- 引入 Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 設定主要字體為 Inter，並確保中文顯示正常 */
         body {
-            font-family 'Inter', 'Noto Sans TC', sans-serif;
-            line-height 1.6;
-            background-color #111827;  整體深色背景 
-            color #f9fafb;  淺色字體 
+            font-family: 'Inter', 'Noto Sans TC', sans-serif;
+            line-height: 1.6;
+            background-color: #111827; /* 整體深色背景 */
+            color: #f9fafb; /* 淺色字體 */
         }
-         模仿 Anduril 的 Banner 視覺衝擊 
+        /* 模仿 Anduril 的 Banner 視覺衝擊 */
         .hero-section {
-             使用深色、高科技感的 Placeholder Image 
-            background-image url('httpsplacehold.co1920x10801f29379ca3aftext=Future+of+Digital+Creation');
-            background-size cover;
-            background-position center;
-            position relative;
-            min-height 80vh;  高度佔據大部分視窗 
+            /* 使用深色、高科技感的 Placeholder Image */
+            background-image: url('https://placehold.co/1920x1080/1f2937/9ca3af?text=Future+of+Digital+Creation');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            min-height: 80vh; /* 高度佔據大部分視窗 */
         }
-         標題動畫效果 
+        /* 標題動畫效果 */
         @keyframes fadeInDown {
-            from { opacity 0; transform translateY(-20px); }
-            to { opacity 1; transform translateY(0); }
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         .animate-fade-in-down {
-            animation fadeInDown 1s ease-out forwards;
+            animation: fadeInDown 1s ease-out forwards;
         }
-         輔助連結顏色 
+        /* 輔助連結顏色 */
         .accent-link {
-            color #3b82f6;  亮藍色作為重點色 
-            transition color 0.3s;
+            color: #3b82f6; /* 亮藍色作為重點色 */
+            transition: color 0.3s;
         }
-        .accent-linkhover {
-            color #60a5fa;
-            text-decoration underline;
+        .accent-link:hover {
+            color: #60a5fa;
+            text-decoration: underline;
         }
-    style
-    script
+    </style>
+    <script>
         tailwind.config = {
-            theme {
-                extend {
-                    colors {
-                        'dark-bg' '#1f2937',  深灰藍 
-                        'accent-blue' '#3b82f6',  亮藍 
-                        'light-section' '#f9fafb',  亮白區塊 
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-bg': '#1f2937', /* 深灰藍 */
+                        'accent-blue': '#3b82f6', /* 亮藍 */
+                        'light-section': '#f9fafb', /* 亮白區塊 */
                     }
                 }
             }
         }
-    script
-head
-body
+    </script>
+</head>
+<body>
 
-    !-- 頂部導覽列 (模仿 Anduril 乾淨的深色風格) --
-    nav class=bg-dark-bg90 backdrop-blur-md fixed w-full z-20 top-0 shadow-xl border-b border-gray-700
-        div class=max-w-7xl mx-auto px-4 smpx-6 lgpx-8
-            div class=flex justify-between h-16
-                !-- 網站 Logo  名稱 (左側) --
-                div class=flex-shrink-0 flex items-center
-                    a href=# class=text-xl font-extrabold text-white tracking-wider資訊研習  STUDIOa
-                div
-                !-- 選單連結 (右側 - 僅保留主要項目) --
-                div class=flex items-center space-x-6
-                    a href=# class=nav-link text-gray-300 hovertext-accent-blue px-3 py-2 text-sm font-medium transition duration-200首頁a
-                    a href=# class=nav-link text-gray-300 hovertext-accent-blue px-3 py-2 text-sm font-medium transition duration-200服務a
-                    a href=#projects class=nav-link text-white bg-accent-blue80 hoverbg-accent-blue px-4 py-2 rounded-lg text-sm font-semibold transition duration-200 shadow-md研習a
-                    a href=# class=nav-link text-gray-300 hovertext-accent-blue px-3 py-2 text-sm font-medium transition duration-200關於a
-                div
-            div
-        div
-    nav
+    <!-- 頂部導覽列 (模仿 Anduril 乾淨的深色風格) -->
+    <nav class="bg-dark-bg/90 backdrop-blur-md fixed w-full z-20 top-0 shadow-xl border-b border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <!-- 網站 Logo / 名稱 (左側) -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="text-xl font-extrabold text-white tracking-wider">資訊研習 | STUDIO</a>
+                </div>
+                <!-- 選單連結 (右側 - 僅保留主要項目) -->
+                <div class="flex items-center space-x-6">
+                    <a href="#" class="nav-link text-gray-300 hover:text-accent-blue px-3 py-2 text-sm font-medium transition duration-200">首頁</a>
+                    <a href="#" class="nav-link text-gray-300 hover:text-accent-blue px-3 py-2 text-sm font-medium transition duration-200">服務</a>
+                    <a href="#projects" class="nav-link text-white bg-accent-blue/80 hover:bg-accent-blue px-4 py-2 rounded-lg text-sm font-semibold transition duration-200 shadow-md">研習</a>
+                    <a href="#" class="nav-link text-gray-300 hover:text-accent-blue px-3 py-2 text-sm font-medium transition duration-200">關於</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-    !-- 主視覺 Banner 區塊 (全螢幕衝擊視覺) --
-    header class=hero-section flex items-center justify-center pt-16
-        !-- 模擬原圖上方的透明度效果 --
-        div class=absolute inset-0 bg-black60div
-        div class=max-w-4xl mx-auto text-center z-10 p-4
-            h1 class=text-4xl smtext-6xl lgtext-7xl font-extrabold text-white tracking-tight leading-snug animate-fade-in-down style=text-shadow 0 4px 10px rgba(0,0,0,0.8);
+    <!-- 主視覺 Banner 區塊 (全螢幕衝擊視覺) -->
+    <header class="hero-section flex items-center justify-center pt-16">
+        <!-- 模擬原圖上方的透明度效果 -->
+        <div class="absolute inset-0 bg-black/60"></div>
+        <div class="max-w-4xl mx-auto text-center z-10 p-4">
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-snug animate-fade-in-down" style="text-shadow: 0 4px 10px rgba(0,0,0,0.8);">
                 AI 賦能教學 — 創造無限可能
-            h1
-            p class=text-xl smtext-2xl text-gray-300 mt-6 opacity-0 animate-fade-in-down style=animation-delay 0.5s; animation-fill-mode forwards;
+            </h1>
+            <p class="text-xl sm:text-2xl text-gray-300 mt-6 opacity-0 animate-fade-in-down" style="animation-delay: 0.5s; animation-fill-mode: forwards;">
                 提供最新資訊科技研習與數位創作解決方案。
-            p
-            a href=#projects class=mt-10 inline-block bg-accent-blue hoverbg-blue-600 text-white font-bold py-3 px-8 rounded-xl text-lg transition duration-300 shadow-xl opacity-0 animate-fade-in-down style=animation-delay 1s; animation-fill-mode forwards;
+            </p>
+            <a href="#projects" class="mt-10 inline-block bg-accent-blue hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-xl text-lg transition duration-300 shadow-xl opacity-0 animate-fade-in-down" style="animation-delay: 1s; animation-fill-mode: forwards;">
                 探索最新研習
-            a
-        div
-    header
+            </a>
+        </div>
+    </header>
 
-    !-- 研習活動列表區塊 (Projects Section) --
-    main id=projects class=bg-light-section text-gray-900 py-16 smpy-24
-        div class=max-w-7xl mx-auto px-4 smpx-6 lgpx-8
-            h2 class=text-4xl font-extrabold text-center mb-12 text-gray-900 border-b-4 border-accent-blue50 pb-2 inline-block最新研習活動h2
+    <!-- 研習活動列表區塊 (Projects Section) -->
+    <main id="projects" class="bg-light-section text-gray-900 py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-extrabold text-center mb-12 text-gray-900 border-b-4 border-accent-blue/50 pb-2 inline-block">最新研習活動</h2>
 
-            !-- 研習卡片網格佈局 (Grid Layout) --
-            section class=grid grid-cols-1 mdgrid-cols-2 gap-8
+            <!-- 研習卡片網格佈局 (Grid Layout) -->
+            <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-                !-- 作品活動卡片 1 --
-                div class=bg-white rounded-xl shadow-2xl overflow-hidden transform hoverscale-[1.02] transition duration-300
-                    img src=httpsplacehold.co800x450111827fffffftext=AI+Film+Creation 
-                         alt=AI創作微電影 研習圖片 
-                         class=w-full h-56 object-cover
-                    div class=p-6
-                        h3 class=text-2xl font-bold mb-220251022 AI創作微電影h3
-                        p class=text-sm text-gray-500 mb-4課程主題：數位敘事與 AI 視覺生成p
-                        div class=space-y-2
-                            a href=# class=block accent-link font-semibold研習簡報 $to$a
-                            a href=# class=block accent-link font-semibold研習成果發表區 (Padlet) $to$a
-                        div
-                    div
-                div
+                <!-- 作品/活動卡片 1 -->
+                <div class="bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition duration-300">
+                    <img src="https://placehold.co/800x450/111827/ffffff?text=AI+Film+Creation" 
+                         alt="AI創作微電影 研習圖片" 
+                         class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">2025/10/22 AI創作微電影</h3>
+                        <p class="text-sm text-gray-500 mb-4">課程主題：數位敘事與 AI 視覺生成</p>
+                        <div class="space-y-2">
+                            <a href="#" class="block accent-link font-semibold">研習簡報 $\to$</a>
+                            <a href="#" class="block accent-link font-semibold">研習成果發表區 (Padlet) $\to$</a>
+                        </div>
+                    </div>
+                </div>
 
-                !-- 作品活動卡片 2 --
-                div class=bg-white rounded-xl shadow-2xl overflow-hidden transform hoverscale-[1.02] transition duration-300
-                    img src=httpsplacehold.co800x450064e3bfffffftext=Gemini+Exploration 
-                         alt=Gemini大探索 研習圖片 
-                         class=w-full h-56 object-cover
-                    div class=p-6
-                        h3 class=text-2xl font-bold mb-220251015 Gemini大探索h3
-                        p class=text-sm text-gray-500 mb-4一起探索 AI 賦能教學的無限可能！p
-                        div class=space-y-2
-                            a href=# class=block accent-link font-semibold研習簡報 $to$a
-                            a href=# class=block accent-link font-semibold研習成果發表區 (Padlet) $to$a
-                        div
-                    div
-                div
+                <!-- 作品/活動卡片 2 -->
+                <div class="bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition duration-300">
+                    <img src="https://placehold.co/800x450/064e3b/ffffff?text=Gemini+Exploration" 
+                         alt="Gemini大探索 研習圖片" 
+                         class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">2025/10/15 Gemini大探索</h3>
+                        <p class="text-sm text-gray-500 mb-4">一起探索 AI 賦能教學的無限可能！</p>
+                        <div class="space-y-2">
+                            <a href="#" class="block accent-link font-semibold">研習簡報 $\to$</a>
+                            <a href="#" class="block accent-link font-semibold">研習成果發表區 (Padlet) $\to$</a>
+                        </div>
+                    </div>
+                </div>
                 
-                !-- 模擬更多卡片 (可複製貼上此區塊) --
-                div class=bg-white rounded-xl shadow-2xl overflow-hidden transform hoverscale-[1.02] transition duration-300
-                    img src=httpsplacehold.co800x450be123cfffffftext=Automation+Workshop 
-                         alt=網站自動化部署入門 
-                         class=w-full h-56 object-cover
-                    div class=p-6
-                        h3 class=text-2xl font-bold mb-220251008 網站自動化部署入門h3
-                        p class=text-sm text-gray-500 mb-4從零開始，利用 CICD 輕鬆部署靜態網站。p
-                        div class=space-y-2
-                            p class=text-gray-700
-                                a href=# class=block accent-link font-semibold教材與程式碼範例 $to$a
-                            p
-                            p class=text-gray-700
-                                a href=# class=block accent-link font-semibold學員問題 Q&A $to$a
-                            p
-                        div
-                    div
-                div
+                <!-- 模擬更多卡片 (可複製貼上此區塊) -->
+                <div class="bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition duration-300">
+                    <img src="https://placehold.co/800x450/be123c/ffffff?text=Automation+Workshop" 
+                         alt="網站自動化部署入門" 
+                         class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">2025/10/08 網站自動化部署入門</h3>
+                        <p class="text-sm text-gray-500 mb-4">從零開始，利用 CI/CD 輕鬆部署靜態網站。</p>
+                        <div class="space-y-2">
+                            <p class="text-gray-700">
+                                <a href="#" class="block accent-link font-semibold">教材與程式碼範例 $\to$</a>
+                            </p>
+                            <p class="text-gray-700">
+                                <a href="#" class="block accent-link font-semibold">學員問題 Q&A $\to$</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
-            section
-        div
-    main
+            </section>
+        </div>
+    </main>
 
-    !-- 網站底部 (Footer) - 深色簡潔設計 --
-    footer class=bg-dark-bg text-gray-400 py-12 border-t border-gray-800
-        div class=max-w-7xl mx-auto px-4 smpx-6 lgpx-8 text-center
-            h4 class=text-2xl font-bold text-white mb-4資訊研習工作室h4
-            div class=flex justify-center space-x-6 mb-6
-                !-- 模擬社群圖標 --
-                a href=# class=text-gray-400 hovertext-accent-blue transition duration-200
+    <!-- 網站底部 (Footer) - 深色簡潔設計 -->
+    <footer class="bg-dark-bg text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h4 class="text-2xl font-bold text-white mb-4">資訊研習工作室</h4>
+            <div class="flex justify-center space-x-6 mb-6">
+                <!-- 模擬社群圖標 -->
+                <a href="#" class="text-gray-400 hover:text-accent-blue transition duration-200">
                     
-                a
-                a href=# class=text-gray-400 hovertext-accent-blue transition duration-200
+                </a>
+                <a href="#" class="text-gray-400 hover:text-accent-blue transition duration-200">
                     
-                a
-                a href=# class=text-gray-400 hovertext-accent-blue transition duration-200
+                </a>
+                <a href="#" class="text-gray-400 hover:text-accent-blue transition duration-200">
                     
-                a
-            div
-            p class=text-sm&copy; 2025 資訊研習工作室. All Rights Reserved.p
-            p class=mt-2 text-xs text-gray-500本網站為現代作品集展示範本，適合用於 NetlifyVercel 部署。p
-        div
-    footer
+                </a>
+            </div>
+            <p class="text-sm">&copy; 2025 資訊研習工作室. All Rights Reserved.</p>
+            <p class="mt-2 text-xs text-gray-500">本網站為現代作品集展示範本，適合用於 Netlify/Vercel 部署。</p>
+        </div>
+    </footer>
 
-body
-html
+</body>
+</html>

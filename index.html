@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>花園司令 | Gardenhead STUDIO</title>
+    <title>花園司令 | Gardenhead Studio</title>
     <!-- 引入 Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -57,33 +57,34 @@
 </head>
 <body>
 
-    <!-- 頂部導覽列 (已修改: 首頁移左上, Logo 居中, 刪除 '服務') -->
+    <!-- 頂部導覽列 -->
     <nav class="bg-dark-bg/90 backdrop-blur-md fixed w-full z-20 top-0 shadow-xl border-b border-gray-700">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center h-16 relative">
                 
                 <!-- 1. 左上方連結 (首頁) -->
                 <div class="flex items-center space-x-4 absolute left-0">
-                    <a href="#" class="nav-link text-white bg-accent-blue/10 hover:bg-accent-blue/30 px-3 py-2 rounded-lg text-sm font-medium transition duration-200">首頁</a>
+                    <a href="index.html" class="nav-link text-white bg-accent-blue/10 hover:bg-accent-blue/30 px-3 py-2 rounded-lg text-sm font-medium transition duration-200">首頁</a>
                 </div>
 
                 <!-- 2. 中央 Logo / 名稱 (花園司令) -->
                 <div class="flex-shrink-0 flex items-center absolute left-1/2 transform -translate-x-1/2">
-                    <a href="#" class="text-xl font-extrabold text-white tracking-wider">花園司令 | Gardenhead Studio</a>
+                    <a href="index.html" class="text-xl font-extrabold text-white tracking-wider">花園司令 | Gardenhead Studio</a>
                 </div>
 
                 <!-- 3. 右上方選單連結 -->
                 <div class="flex items-center space-x-6 absolute right-0">
-                    <!-- '服務' 已被移除 -->
                     
-                    <a href="#workshops" class="nav-link text-white bg-accent-blue/80 hover:bg-accent-blue px-4 py-2 rounded-lg text-sm font-semibold transition duration-200 shadow-md">研習</a>
-                    <a href="#" class="nav-link text-gray-300 hover:text-accent-blue px-3 py-2 text-sm font-medium transition duration-200">關於</a>
+                    <!-- 研習連結已移除藍色色塊 -->
+                    <a href="#workshops" class="nav-link text-gray-300 hover:text-accent-blue px-3 py-2 text-sm font-medium transition duration-200">研習</a>
+                    <!-- 連結已更新為 about.html -->
+                    <a href="about.html" class="nav-link text-gray-300 hover:text-accent-blue px-3 py-2 text-sm font-medium transition duration-200">關於</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- 主視覺 Banner 區塊 (標題已修改為 '創造無限可能') -->
+    <!-- 主視覺 Banner 區塊 -->
     <header class="hero-section flex items-center justify-center pt-16">
         <!-- 模擬原圖上方的透明度效果 -->
         <div class="absolute inset-0 bg-black/60"></div>

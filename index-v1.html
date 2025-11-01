@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>花園司令 | Gardenhead Studio</title>
+    <!-- 引入 Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 設定主要字體為 Inter，並確保中文顯示正常 */
+        body {
+            font-family: 'Inter', 'Noto Sans TC', sans-serif;
+            line-height: 1.6;
+            background-color: #111827; /* 整體深色背景 */
+            color: #f9fafb; /* 淺色字體 */
+        }
+        /* 模仿 Anduril 的 Banner 視覺衝擊 */
+        .hero-section {
+            /* 使用深色、高科技感的 Placeholder Image */
+            background-image: url('https://placehold.co/1920x1080/1f2937/9ca3af?text=Future+of+Digital+Creation');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            min-height: 80vh; /* 高度佔據大部分視窗 */
+        }
+        /* 標題動畫效果 */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-down {
+            animation: fadeInDown 1s ease-out forwards;
+        }
+        /* 輔助連結顏色 */
+        .accent-link {
+            color: #3b82f6; /* 亮藍色作為重點色 */
+            transition: color 0.3s;
+        }
+        .accent-link:hover {
+            color: #60a5fa;
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-bg': '#1f2937', /* 深灰藍 */
+                        'accent-blue': '#3b82f6', /* 亮藍 */
+                        'light-section': '#f9fafb', /* 亮白區塊 */
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <!-- 頂部導覽列 -->
+    <nav class="bg-dark-bg/90 backdrop-blur-md fixed w-full z-20 top-0 shadow-xl border-b border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center h-16 relative">
+                
+                <!-- 1. 左上方連結 (首頁) -->
+                <div class="flex items-center space-x-4 absolute left-0">
+                    <a href="index.html" class="nav-link text-white bg-accent-blue/10 hover:bg-accent-blue/30 px-3 py-2 rounded-lg text-sm font-medium transition duration-200">花園司令</a>
+                </div>
+
+                <!-- 2. 中央 Logo / 名稱 (花園司令) -->
+                <!--
+				<div class="flex-shrink-0 flex items-center absolute left-1/2 transform -translate-x-1/2">
+                    <a href="index.html" class="text-xl font-extrabold text-white tracking-wider">花園司令</a>
+                </div> 
+				-->
+
+                <!-- 3. 右上方選單連結 -->
+                <div class="flex items-center space-x-6 absolute right-0">
+                    
+                    <!-- 研習連結已移除藍色色塊 -->
+                    <a href="#workshops" class="nav-link text-gray-300 hover:text-accent-blue px-3 py-2 text-sm font-medium transition duration-200">研習</a>
+                    <!-- 連結已更新為 about.html -->
+                    <a href="about.html" class="nav-link text-gray-300 hover:text-accent-blue px-3 py-2 text-sm font-medium transition duration-200">關於</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主視覺 Banner 區塊 -->
+    <header class="hero-section flex items-center justify-center pt-16">
+        <!-- 模擬原圖上方的透明度效果 -->
+        <div class="absolute inset-0 bg-black/60"></div>
+        <div class="max-w-4xl mx-auto text-center z-10 p-4">
+            <!-- 標題已修改 -->
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-snug animate-fade-in-down" style="text-shadow: 0 4px 10px rgba(0,0,0,0.8);">
+                探索AI時代的可能性
+            </h1>
+            <p class="text-xl sm:text-2xl text-gray-300 mt-6 opacity-0 animate-fade-in-down" style="animation-delay: 0.5s; animation-fill-mode: forwards;">
+                提供最新資訊科技研習與數位創作解決方案
+            </p>
+            <a href="#workshops" class="mt-10 inline-block bg-accent-blue hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-xl text-lg transition duration-300 shadow-xl opacity-0 animate-fade-in-down" style="animation-delay: 1s; animation-fill-mode: forwards;">
+                探索最新研習
+            </a>
+        </div>
+    </header>
+
+    <!-- 研習活動列表區塊 (Workshops Section) -->
+    <main id="workshops" class="bg-light-section text-gray-900 py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-extrabold text-center mb-12 text-gray-900 border-b-4 border-accent-blue/50 pb-2 inline-block">最新研習活動</h2>
+
+            <!-- 研習卡片網格佈局 (Grid Layout) -->
+            <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <!-- 作品/活動卡片 1 - 藍色 -->
+                <div class="bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition duration-300">
+                    <img src="https://placehold.co/800x450/111827/ffffff?text=AI+Film+Creation" 
+                         alt="AI創作微電影 研習圖片" 
+                         class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">2025/10/22 AI創作微電影</h3>
+                        <p class="text-sm text-gray-500 mb-4">課程主題：使用Gemini、Grok等工具，四步工作流創作自己的微電影</p>
+                        <div class="space-y-2">
+                            <a href="https://www.canva.com/design/DAG2Vgx5o4c/04i6YmqfA7KtS_aWeTlqpQ/view?utm_content=DAG2Vgx5o4c&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h90ad24050a" class="block accent-link font-semibold" target="_blank">研習簡報</a>
+                            <a href="https://hcedu.padlet.org/thps401_1/20251022-ai-dlriqs8kqlbu8igu" class="block accent-link font-semibold" target="_blank">研習成果發表區 (Padlet)</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 作品/活動卡片 2 - 綠色 -->
+                <div class="bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition duration-300">
+                    <img src="https://placehold.co/800x450/065f46/ffffff?text=Gemini+Exploration" 
+                         alt="Gemini大探索 研習圖片" 
+                         class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">2025/10/15 Gemini大探索</h3>
+                        <p class="text-sm text-gray-500 mb-4">一起探索 AI 賦能教學的無限可能！</p>
+                        <div class="space-y-2">
+                            <a href="https://www.canva.com/design/DAG1x9gmUSE/Zx3M2OpaLcbI6TjfTHle4Q/view?utm_content=DAG1x9gmUSE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h6fd1b0639f" class="block accent-link font-semibold" target="_blank">研習簡報</a>
+                            <a href="https://hcedu.padlet.org/thps401_1/20251015-gemini-x2uzqy0tfa3kbqif" class="block accent-link font-semibold" target="_blank">研習成果發表區 (Padlet)</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 作品/活動卡片 3 - 紫色 -->
+                <div class="bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition duration-300">
+                    <img src="https://placehold.co/800x450/5b21b6/ffffff?text=Padlet+Workshop" 
+                         alt="Padlet 研習圖片" 
+                         class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">2025/10/08 Padlet 玩出教學新互動</h3>
+                        <p class="text-sm text-gray-500 mb-4">以實作活動認識 Padlet 核心功能及如何應用。</p>
+                        <div class="space-y-2">
+                            <a href="https://www.canva.com/design/DAG1GEimPSk/IU5j_eJYpYojkHb11pCwuA/view?utm_content=DAG1GEimPSk&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h76e8c4eef9" class="block accent-link font-semibold" target="_blank">研習簡報</a>
+                            <a href="https://hcedu.padlet.org/volcanic2/padlet-20251008-4pmcb057rnmhcqmm" class="block accent-link font-semibold" target="_blank">研習成果發表區 (Padlet)</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 作品/活動卡片 4 - 紅色 -->
+                <div class="bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition duration-300">
+                    <img src="https://placehold.co/800x450/b91c1c/ffffff?text=LoiLoNote+School" 
+                         alt="LoiLoNote 研習圖片" 
+                         class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">2025/9/24 LoiLoNote 教學好幫手</h3>
+                        <p class="text-sm text-gray-500 mb-4">以實作活動認識 LoiLoNote 核心功能及如何應用。</p>
+                        <div class="space-y-2">
+                            <a href="https://www.canva.com/design/DAGzuWMOog4/iiNf3Z-Ndiz9hnNI0WEztQ/view?utm_content=DAGzuWMOog4&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hb45d46458a" class="block accent-link font-semibold" target="_blank">研習簡報</a>
+                            <a href="https://reurl.cc/89Zdzg" class="block accent-link font-semibold" target="_blank">LoiLoNote School</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 作品/活動卡片 5 - 黃色 -->
+                <div class="bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition duration-300">
+                    <img src="https://placehold.co/800x450/b45309/ffffff?text=AI+Storybook+Design" 
+                         alt="AI創作繪本 研習圖片" 
+                         class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">2025/06/26 一起玩AI：輕鬆創作繪本</h3>
+                        <p class="text-sm text-gray-500 mb-4">利用 ChatGPT / Canva 輔助，十分鐘創作AI繪本。</p>
+                        <div class="space-y-2">
+                            <a href="https://www.canva.com/design/DAGrXUWHZcE/7v8Iwas8PB-9RUZg5Yvr9A/view?utm_content=DAGrXUWHZcE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hbf761b90d0" class="block accent-link font-semibold" target="_blank">研習簡報</a>
+                            <a href="https://chatgpt.com/share/685c0888-3d48-8011-84eb-ec1e3d905147" class="block accent-link font-semibold" target="_blank">ChatGPT範例</a>
+							<a href="https://hcedu.padlet.org/volcanic2/20250626-ai-vgqavfbqk7khhj8l" class="block accent-link font-semibold" target="_blank">Padlet成果發表連結</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 作品/活動卡片 6 - 藍色 -->
+                <div class="bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition duration-300">
+                    <img src="https://placehold.co/800x450/111827/ffffff?text=AI+Storybook+Design" 
+                         alt="AI創作繪本 研習圖片" 
+                         class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">2025/04/16 AI 動手做：輕鬆創作繪本</h3>
+                        <p class="text-sm text-gray-500 mb-4">利用 ChatGPT / Canva 輔助，十分鐘創作AI繪本。</p>
+                        <div class="space-y-2">
+                            <a href="https://www.canva.com/design/DAGkJxGnzkk/adRubYWlTO8FYQ8vr6JAyQ/view?utm_content=DAGkJxGnzkk&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hdfaa0b1a1d" class="block accent-link font-semibold" target="_blank">研習簡報</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 作品/活動卡片 7 - 綠色 -->
+                <div class="bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition duration-300">
+                    <img src="https://placehold.co/800x450/065f46/ffffff?text=GenAI:+Voices" 
+                         alt="GenAI3 研習圖片" 
+                         class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">2025/02/26 生成式AI應用工作坊(III)</h3>
+                        <p class="text-sm text-gray-500 mb-4">生成式AI工作坊：聲音篇</p>
+                        <div class="space-y-2">
+                            <a href="https://www.canva.com/design/DAGf2AghoaE/xbvbpwJiu2iIE60NQyJlkw/view?utm_content=DAGf2AghoaE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h6389de674f" class="block accent-link font-semibold" target="_blank">研習簡報 </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 作品/活動卡片 8 - 紫色 -->
+                <div class="bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition duration-300">
+                    <img src="https://placehold.co/800x450/5b21b6/ffffff?text=GenAI:+Images" 
+                         alt="GenAI2 研習圖片" 
+                         class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">2024/12/25 生成式AI應用工作坊(II)</h3>
+                        <p class="text-sm text-gray-500 mb-4">生成式AI工作坊：影像篇</p>
+                        <div class="space-y-2">
+                            <a href="https://www.canva.com/design/DAGZ45TWC0M/zq6w8iQP1bb6fzOc63EGnA/view?utm_content=DAGZ45TWC0M&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h01bfd0b9e3" class="block accent-link font-semibold" target="_blank">課程大綱</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 作品/活動卡片 9 - 紅色 -->
+                <div class="bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition duration-300">
+                    <img src="https://placehold.co/800x450/b91c1c/ffffff?text=GenAI:+Begin" 
+                         alt="GenAI1 研習圖片" 
+                         class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">2024/12/04 生成式AI應用工作坊(I)</h3>
+                        <p class="text-sm text-gray-500 mb-4">生成式AI工作坊：啟動篇</p>
+                        <div class="space-y-2">
+                            <a href="https://www.canva.com/design/DAGXx_Ue8ZI/KQHikVpfZ-fpRn6nUnv4Zw/view?utm_content=DAGXx_Ue8ZI&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h59f53c436b" class="block accent-link font-semibold" target="_blank">研習簡報 </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 作品/活動卡片 10 - 黃色 -->
+                <div class="bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition duration-300">
+                    <img src="https://placehold.co/800x450/b45309/ffffff?text=Canva+AI" 
+                         alt="Canva 研習圖片" 
+                         class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">2024/11/13 Canva AI 工具實作</h3>
+                        <p class="text-sm text-gray-500 mb-4">認識Canva並活用強大的AI工具</p>
+                        <div class="space-y-2">
+                            <a href="https://www.canva.com/design/DAGV_89voSs/GHD9LmRohQvbxveMEdwXnQ/view?utm_content=DAGV_89voSs&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h573efd1869" class="block accent-link font-semibold"  target="_blank">研習簡報 </a>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <!-- 網站底部 (Footer) - 深色簡潔設計 -->
+    <footer class="bg-dark-bg text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h4 class="text-2xl font-bold text-white mb-4">花園司令 | Gardenhead Studio</h4>
+            <div class="flex justify-center space-x-6 mb-6">
+                <!-- 模擬社群圖標 -->
+                <a href="#" class="text-gray-400 hover:text-accent-blue transition duration-200">
+                                    </a>
+                <a href="#" class="text-gray-400 hover:text-accent-blue transition duration-200">
+                                    </a>
+                <a href="#" class="text-gray-400 hover:text-accent-blue transition duration-200">
+                                    </a>
+            </div>
+            <p class="text-sm">&copy; 2025 Gardenhead Studio. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>關於我 - 花園司令 | Gardenhead Studio</title>
+    <!-- 引入 Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 繼承自 index.html 的通用樣式 */
+        body {
+            font-family: 'Inter', 'Noto Sans TC', sans-serif;
+            line-height: 1.6;
+            background-color: #111827; /* 整體深色背景 */
+            color: #f9fafb; /* 淺色字體 */
+        }
+        /* 輔助連結顏色 */
+        .accent-link {
+            color: #3b82f6; /* 亮藍色作為重點色 */
+            transition: color 0.3s;
+        }
+        .accent-link:hover {
+            color: #60a5fa;
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-bg': '#1f2937', /* 深灰藍 */
+                        'accent-blue': '#3b82f6', /* 亮藍 */
+                        'light-section': '#f9fafb', /* 亮白區塊 */
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <!-- 頂部導覽列 (與 index.html 相同) -->
+    <nav class="bg-dark-bg/90 backdrop-blur-md fixed w-full z-20 top-0 shadow-xl border-b border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center h-16 relative">
+                
+                <!-- 1. 左上方連結 (首頁) -->
+                <div class="flex items-center space-x-4 absolute left-0">
+                    <a href="index.html" class="nav-link text-white bg-accent-blue/10 hover:bg-accent-blue/30 px-3 py-2 rounded-lg text-sm font-medium transition duration-200">花園司令</a>
+                </div>
+
+                <!-- 2. 中央 Logo / 名稱 (花園司令) -->
+                <!-- 
+				<div class="flex-shrink-0 flex items-center absolute left-1/2 transform -translate-x-1/2">
+                    <a href="index.html" class="text-xl font-extrabold text-white tracking-wider">花園司令</a>
+                </div>
+				-->
+
+                <!-- 3. 右上方選單連結 -->
+                <div class="flex items-center space-x-6 absolute right-0">
+                    
+                    <!-- 研習連結已移除藍色色塊，並確認指向首頁的 Workshops 區塊 -->
+                    <a href="index.html#workshops" class="nav-link text-gray-300 hover:text-accent-blue px-3 py-2 text-sm font-medium transition duration-200">研習</a>
+                    <!-- 關於 (目前頁面) -->
+                    <a href="about.html" class="nav-link text-accent-blue hover:text-accent-blue px-3 py-2 text-sm font-medium transition duration-200">關於</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要內容區塊 -->
+    <main class="pt-24 pb-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- 標題 -->
+            <h2 class="text-3xl font-bold mb-8 text-center text-white">花園司令</h2>
+
+            <!-- 簡介與照片區塊 (雙欄 RWD) -->
+            <section class="grid grid-cols-1 md:grid-cols-3 gap-10 items-start mb-16">
+                
+                <!-- 左側：個人照片或 Logo -->
+                <div class="md:col-span-1 flex justify-center md:justify-start">
+                    <img src="gardenhead-chibi.png" 
+                         alt="花園司令工作室 Logo/個人照片" 
+                         class="rounded-full shadow-2xl w-48 h-48 object-cover border-4 border-accent-blue/50">
+                </div>
+
+                <!-- 右側：個人簡介 -->
+                <div class="md:col-span-2">
+                    <p class="text-2xl font-semibold mb-4 text-accent-blue">「用科技啟發，以設計實踐」</p>
+                    <p class="text-gray-300 mb-4">
+                        專注於「數位教育」與「資訊科技應用」，透過創新、實用的工作坊和研習，協助教育工作者掌握最新的 AI 工具和教學法。核心使命是將複雜的技術轉化為直覺的教學資源，為未來的教育鋪路。
+                    </p>
+                    <p class="text-gray-300">
+                        本網站作為個人作品集，記錄了研習、工作坊、課程設計、技術實踐、教學實用小工具等。
+                    </p>
+                </div>
+            </section>
+
+            <!-- 核心技能/專長區塊 (三欄 Grid) -->
+            <section class="mt-16 pt-8 border-t border-gray-800">
+                <h2 class="text-3xl font-bold mb-8 text-center text-white">核心專長</h2>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
+                    <!-- 技能 1 -->
+                    <div class="p-6 bg-dark-bg/50 rounded-lg shadow-xl border border-gray-700 hover:border-accent-blue transition duration-300">
+                        <div class="text-5xl text-accent-blue mb-3">🛠️</div>
+                        <h3 class="text-xl font-bold mb-2">生成式 AI 教學</h3>
+                        <p class="text-sm text-gray-400">專精於大型語言模型(LLMs)和相關工具在教育領域的實際應用。</p>
+                    </div>
+
+                    <!-- 技能 2 -->
+                    <div class="p-6 bg-dark-bg/50 rounded-lg shadow-xl border border-gray-700 hover:border-accent-blue transition duration-300">
+                        <div class="text-5xl text-accent-blue mb-3">🌐</div>
+                        <h3 class="text-xl font-bold mb-2">視角</h3>
+                        <p class="text-sm text-gray-400">以資訊專長及軟體工程師背景，提供教師不一樣的視野。</p>
+                    </div>
+                    
+                    <!-- 技能 3 -->
+                    <div class="p-6 bg-dark-bg/50 rounded-lg shadow-xl border border-gray-700 hover:border-accent-blue transition duration-300">
+                        <div class="text-5xl text-accent-blue mb-3">🎨</div>
+                        <h3 class="text-xl font-bold mb-2">數位敘事與多媒體</h3>
+                        <p class="text-sm text-gray-400">結合視覺設計、互動工具提升教學互動性。</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- 網站底部 (Footer) - 深色簡潔設計 (與 index.html 相同) -->
+    <footer class="bg-dark-bg text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h4 class="text-2xl font-bold text-white mb-4">花園司令 | Gardenhead Studio</h4>
+            <div class="flex justify-center space-x-6 mb-6">
+                <!-- 模擬社群圖標 -->
+                <a href="#" class="text-gray-400 hover:text-accent-blue transition duration-200">
+                    
+                </a>
+                <a href="#" class="text-gray-400 hover:text-accent-blue transition duration-200">
+                    
+                </a>
+                <a href="#" class="text-gray-400 hover:text-accent-blue transition duration-200">
+                    
+                </a>
+            </div>
+            <p class="text-sm">&copy; 2025 Gardenhead Studio. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
